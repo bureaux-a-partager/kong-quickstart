@@ -22,7 +22,6 @@ services:
       command: kong migrations up
 
   kong:
-    #build: kong/
     image: kong
     depends_on:
       kong-database:
@@ -61,5 +60,3 @@ services:
 
   echo:
     image: paddycarey/go-echo
-    ports:
-      - 8002:8000
